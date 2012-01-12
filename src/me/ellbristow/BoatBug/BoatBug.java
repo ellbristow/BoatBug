@@ -84,7 +84,7 @@ public class BoatBug extends JavaPlugin {
 			}
 		}
 		if (count == 0) {
-			sender.sendMessage("No boats found to clear in world '" + ChatColor.GOLD + world.getName() + "'!");
+			sender.sendMessage("No boats found to clear in world '" + ChatColor.GOLD + world.getName() + ChatColor.WHITE + "'!");
 		}
 		else {
 			if (pass != 0) {
