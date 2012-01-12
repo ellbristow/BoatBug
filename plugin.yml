@@ -1,0 +1,20 @@
+name: BoatBug
+main: me.ellbristow.BoatBug.BoatBug
+version: 1.0
+author: ellbristow
+description: >
+             Stop the boat through walls bug by forcing boats to be placed on water.
+commands:
+  clearboats:
+    description: Clear all boats in the current world.
+    permission: boatbug.clear
+permissions:
+  boatbug.*:
+    description: Access to all BoatBug
+    children:
+      boatbug.clear: true
+      boatbug.bypass: true
+  boatnug.clear:
+    description: Access to /clearboats.
+  boatbug.bypass:
+    description: Allowed to still place boats on land.
