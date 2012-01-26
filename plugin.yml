@@ -1,6 +1,6 @@
 name: BoatBug
 main: me.ellbristow.BoatBug.BoatBug
-version: 1.0
+version: 1.1
 author: ellbristow
 description: >
              Stop the boat through walls bug by forcing boats to be placed on water.

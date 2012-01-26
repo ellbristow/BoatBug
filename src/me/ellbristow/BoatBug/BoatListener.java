@@ -3,11 +3,13 @@ package me.ellbristow.BoatBug;
 import org.bukkit.ChatColor;
 import org.bukkit.block.Block;
 import org.bukkit.entity.Player;
+import org.bukkit.event.EventHandler;
+import org.bukkit.event.EventPriority;
+import org.bukkit.event.Listener;
 import org.bukkit.event.block.Action;
 import org.bukkit.event.player.PlayerInteractEvent;
-import org.bukkit.event.player.PlayerListener;
 
-public class BoatListener extends PlayerListener {
+public class BoatListener implements Listener {
 
 	public static BoatBug plugin;
 	
@@ -15,6 +17,7 @@ public class BoatListener extends PlayerListener {
 		
 	}
 	
+	@EventHandler (priority = EventPriority.NORMAL)
 	public void onPlayerInteract (PlayerInteractEvent event) {
 		Action action = event.getAction();
 		Player player = event.getPlayer();
