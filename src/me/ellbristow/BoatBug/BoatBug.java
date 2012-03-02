@@ -2,14 +2,12 @@ package me.ellbristow.BoatBug;
 
 import java.util.List;
 import java.util.logging.Logger;
-
 import org.bukkit.ChatColor;
 import org.bukkit.World;
 import org.bukkit.command.Command;
 import org.bukkit.command.CommandSender;
 import org.bukkit.entity.Entity;
 import org.bukkit.entity.Player;
-import org.bukkit.plugin.PluginDescriptionFile;
 import org.bukkit.plugin.PluginManager;
 import org.bukkit.plugin.java.JavaPlugin;
 
@@ -21,18 +19,15 @@ public class BoatBug extends JavaPlugin {
 	
 	@Override
 	public void onDisable() {
-		PluginDescriptionFile pdfFile = this.getDescription();
-		this.logger.info("[" + pdfFile.getName() + "] protection disabled.");
 	}
 	
 	@Override
 	public void onEnable() {
-		PluginDescriptionFile pdfFile = this.getDescription();
-		this.logger.info("[" + pdfFile.getName() + "] version " + pdfFile.getVersion() + " protection enabled.");
 		PluginManager pm = getServer().getPluginManager();
 		pm.registerEvents(boatListener, this);
 	}
 	
+        @Override
 	public boolean onCommand(CommandSender sender, Command cmd, String commandLabel, String[] args ) {
 		if (commandLabel.equalsIgnoreCase("clearboats")) {
 			if (sender instanceof Player) {
