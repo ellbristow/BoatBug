@@ -37,7 +37,7 @@ public class BoatBug extends JavaPlugin {
 				return true;
 			}
 			else {
-				// Console command (requires [world]
+				// Console command (requires [world])
 				if (args.length != 1) {
 					sender.sendMessage("Usage: clearboats [world]");
 					return true;

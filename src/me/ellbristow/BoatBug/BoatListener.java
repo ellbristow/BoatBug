@@ -14,7 +14,7 @@ public class BoatListener implements Listener {
 	public static BoatBug plugin;
 	
 	public BoatListener (BoatBug instance) {
-		
+		plugin = instance;
 	}
 	
 	@EventHandler (priority = EventPriority.NORMAL)
